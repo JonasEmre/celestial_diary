@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+    <title>{{ title }} | Celestial Diary</title>
+    {% else %}
+    <title>Celestial Diary</title>
+    {% endif %}
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/navbar.css') }}">
+    <script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+</head>
+<!-- Apple Chancery -->
+<nav class="navbar">
+    <div class="logo"><a href="{{ url_for('home') }}">Celestial Diary</a></div>
+    <button class="navbar-toggle" id="navbar-toggle">&#9776;</button>
+    <div class="links" id="navbar-links">
+        <a href="{{ url_for('home') }}">Home</a>
+        {% if not current_user.is_authenticated %}
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">Register</a>
+        {% else %}
+            <a href="{{ url_for('profile') }}">Profile</a>
+            <a href="{{ url_for('diary') }}">Diary</a>
+            <a href="{{ url_for('logout') }}">Log out</a>
+        {% endif %}
+    </div>
+</nav>
+<body>
+<main>
+    <div class="content-section">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div id="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash-message flash-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+                <div>
+                    <script>
+                        setTimeout(function() {
+                            document.getElementById("flash-messages").style.display = "none";
+                        }, 5000);
+                    </script>
+                </div>
+            {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </div>
+</main>
+</body>
+</html>

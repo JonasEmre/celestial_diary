@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="POST" action="">
+    {{ form.hidden_tag() }}
+    <fieldset class="form-group">
+        <legend>Sign Up</legend>
+        <div>
+            {{ form.username.label }}
+            {{ form.username }}
+        </div>
+        <div>
+            {{ form.email.label }}
+            {{ form.email }}
+        </div>
+        <div>
+            {{ form.password.label }}
+            {{ form.password }}
+        </div>
+        <div>
+            {{ form.confirm_password.label }}
+            {{ form.confirm_password }}
+        </div>
+        <div>
+            {{ form.submit() }}
+        </div>
+        <div style="margin-left:2rem; margin-top:1rem;">
+            <small>Already have an account?</small>
+            <a style="margin-left:1rem;" href="{{ url_for('login') }}">Login</a>
+        </div>
+    </fieldset>
+</form>
+{% endblock %}

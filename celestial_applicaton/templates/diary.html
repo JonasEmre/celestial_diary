@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+    <form class="diary-form" method="POST", action="{{ url_for('diary')}}">
+        <fieldset>
+            <div>
+                {{ form.entry.label }}
+                {{ form.entry }}
+            </div>
+            <div>
+                {{ form.date.label }}
+                {{ form.date }}
+            </div>
+            <div>
+                {{ form.submit }}
+            </div>
+        </fieldset>
+    </form>
+</div>
+{% endblock %}

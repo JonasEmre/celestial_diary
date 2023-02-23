@@ -1,0 +1,129 @@
+body {
+  font-family: 'Tahoma', Arial, sans-serif;
+}
+
+fieldset {
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);
+}
+
+.content-section {
+  margin-top:5rem;
+  margin-left:1rem;
+  margin-right:1rem;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px #ccc;
+  padding: 0.5rem;
+  background-color: #FAFAFA;
+  margin: 1rem;
+}
+
+.flash-message {
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.flash-alert {
+  background-color: #E6E6E6;
+  border: 1px solid #d6e9c6;
+  color: #181818;
+}
+
+.flash-success {
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  color: #3c763d;
+}
+
+.flash-fail {
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  color: #a94442;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  margin-top: 1rem;
+  display: block;
+  font-weight: bold;
+}
+
+.form-group input {
+  display: block;
+  width: 99%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #e0b1cb;
+  box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.25);
+}
+
+.diary-form {
+  width: 90%;
+  margin: auto;
+}
+
+.diary-form h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.diary-form label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.diary-form input[type="text"],
+.diary-form textarea {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background-color: transparent;
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.diary-form input[type="date"] {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background-color: transparent;
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.diary-form input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.diary-form input[type="submit"]:hover {
+  background-color: #0062cc;
+}
