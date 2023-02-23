@@ -1,4 +1,4 @@
-# celestial_diary
+# Celestial Diary
 Celestial Diary is a web application developed using Python and the Flask web framework. The purpose of the application is to provide users with a platform to write about their daily experiences and record their feelings and emotions.
 Additionally, the application utilizes astrology to record the moon and other planetary positions on the day the user writes their diary entry.
 
