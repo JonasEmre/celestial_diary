@@ -1,8 +1,8 @@
 from flask import url_for, render_template, flash, redirect
 from flask_login import login_user, logout_user, current_user, login_required
-from celestial_applicaton.forms import RegisterForm, LoginForm, DiaryEntryForm
-from celestial_applicaton import app, db, bcrypt
-from celestial_applicaton.models import User
+from celestial_application.forms import RegisterForm, LoginForm, DiaryEntryForm
+from celestial_application import app, db, bcrypt
+from celestial_application.models import User
 
 
 @app.route('/')
